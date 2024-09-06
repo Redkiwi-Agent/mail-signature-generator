@@ -1,0 +1,7 @@
+<svg class="
+            h-[2.125rem] w-[2.125rem] transition-transform translate-y-0
+            md:h-10 md:w-10
+            lg:h-[2.875rem] lg:w-[2.875rem]
+            group-hover:-translate-y-full
+            group-focus-visible:-translate-y-full
+        " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 46 46"><path class="transition-[fill_0.15s]" fill="#E30613" d="M0 46h46.343V0H0v46Zm14.685-6.395c-2.341 0-4.236-1.881-4.236-4.205s1.895-4.205 4.236-4.205c2.341 0 4.236 1.881 4.236 4.205s-1.895 4.205-4.236 4.205Zm21.21-22.886c0 7.1-2.88 11.029-8.142 13.162l8.141 9.667H25.647l-7.038-8.339v-8.085h-8.141V20.91c0-8.958 5.407-14.52 14.114-14.52h3.171v8.086h-3.171c-2.95 0-5.973.767-5.973 6.434v2.214h3.157c3.584-.005 5.987-1.305 5.987-6.41v-2.243h8.141V16.72Z"></path></svg>
