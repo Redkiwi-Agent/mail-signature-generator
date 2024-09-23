@@ -10,6 +10,7 @@ const props = defineProps([
   "phone_1_link",
   "phone_2",
   "phone_2_link",
+  "extra_text"
 ]);
 
 const contentToDownload = ref("");
@@ -82,6 +83,7 @@ const generateHtml = () => {
               </tr>
             </tbody>
           </table>
+          ${props.extra_text ? `<br /><p style="font-size:13px;line-height:20px;color:rgb(127,127,127);font-family:arial"><em>${props.extra_text}</em></p>` : ''}
         </div>
       </div>
     </div>

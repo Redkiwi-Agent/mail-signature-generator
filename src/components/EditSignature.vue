@@ -13,6 +13,7 @@ const form = ref({
   phone_1_link: "+31102819633",
   phone_2: "",
   phone_2_link: "",
+  extra_text: ""
 });
 const finalContents = ref("");
 
@@ -128,6 +129,17 @@ const handleContentUpdated = (newContent: string) => {
             type="tel"
             id="phone-2-link"
             name="phone-2-link"
+          />
+        </div>
+
+        <div class="w-full flex flex-col gap-2">
+          <label for="extra-text">Extra tekst</label>
+          <input
+            v-model="form.extra_text"
+            class="p-2 border rounded border-black"
+            type="text"
+            id="extra-text"
+            name="extra-text"
           />
         </div>
 
