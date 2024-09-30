@@ -25,6 +25,30 @@ const copyHtml = () => {
   copy(finalContents.value);
 };
 
+const copyPreview = () => {
+  copyToClip(document.getElementById("previewSignature")?.innerHTML as string);
+};
+
+async function copyToClip(str: string) {
+  if (typeof ClipboardItem === "undefined") {
+
+    const listener = (e: ClipboardEvent) => {
+      e.clipboardData?.setData("text/html", str);
+      e.clipboardData?.setData("text/plain", str);
+      e.preventDefault();
+    }
+    document.addEventListener("copy", listener);
+    document.execCommand("copy");
+    document.removeEventListener("copy", listener);
+    return
+  } 
+  const html = new Blob([str], { type: "text/html" });
+  const text = new Blob([str], { type: "text/plain" });
+  const data = new ClipboardItem({ "text/html": html, "text/plain": text });
+
+  await navigator.clipboard.write([data]);
+}
+
 const handleContentUpdated = (newContent: string) => {
   finalContents.value = newContent;
 };
@@ -33,10 +57,7 @@ const handleContentUpdated = (newContent: string) => {
   <div class="p-10 flex gap-10">
     <div class="w-1/2">
       <h2 class="text-xl font-bold">Pas handtekening aan</h2>
-      <form
-        @submit.prevent="copyHtml"
-        class="flex flex-wrap gap-4 mt-5 items-end"
-      >
+      <form class="flex flex-wrap gap-4 mt-5 items-end">
         <div class="w-[calc(50%_-_0.5rem)] flex flex-col gap-2">
           <label for="name">Naam</label>
           <input
@@ -145,9 +166,18 @@ const handleContentUpdated = (newContent: string) => {
 
         <button
           class="border border-transparent bg-red text-white px-6 py-3 hover:bg-transparent hover:text-red hover:border-red"
-          type="submit"
+          type="button"
+          @click.prevent="copyHtml"
         >
           Kopieer HTML
+        </button>
+
+        <button
+          class="border border-transparent bg-red text-white px-6 py-3 hover:bg-transparent hover:text-red hover:border-red"
+          type="button"
+          @click.prevent="copyPreview"
+        >
+          Kopieer preview
         </button>
       </form>
     </div>
