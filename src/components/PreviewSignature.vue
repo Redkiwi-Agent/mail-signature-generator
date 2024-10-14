@@ -41,6 +41,9 @@ const generateHtml = () => {
                     <span style="font-size:10pt; font-family:Arial, sans-serif; color:white;"><u></u><u></u></span>
                   </p>
                 </td>
+                ${
+                  props.image 
+                  ? `
                 <td style="padding:0cm 15pt 0cm 0cm;">
                   <p class="MsoNormal">
                     <span style="font-size:10pt; font-family:Arial, sans-serif; color:white;">
@@ -57,6 +60,9 @@ const generateHtml = () => {
                     </font>
                   </p>
                 </td>
+              `
+                : ""
+              }
                 <td style="padding:0cm;">
                   <p class="MsoNormal" style="line-height:15pt;">
                     <b>
