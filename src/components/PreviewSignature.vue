@@ -75,7 +75,7 @@ const generateHtml = () => {
                       props.title
                     }<br /></span>
                     <span style="font-size:10pt; font-family:Arial, sans-serif; color:white;">
-                      <a href="${
+                      <a href="tel:${
                         props.phone_1_link
                       }" style="color:rgb(17, 85, 204);" target="_blank">
                         <span style="color:black;">${props.phone_1}</span>
@@ -83,7 +83,7 @@ const generateHtml = () => {
                       ${
                         props.phone_2 && props.phone_2_link
                           ? `
-                        <br /><a href="${props.phone_2_link}" style="color:rgb(17, 85, 204);" target="_blank">
+                        <br /><a href="tel:${props.phone_2_link}" style="color:rgb(17, 85, 204);" target="_blank">
                           <span style="color:black;">${props.phone_2}</span>
                         </a>
                       `
