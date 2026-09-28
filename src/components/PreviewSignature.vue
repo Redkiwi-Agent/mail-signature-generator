@@ -63,6 +63,18 @@ const generateHtml = () => {
               `
                 : ""
               }
+                <td style="padding:0cm 15pt 0cm 0cm;">
+                  <p class="MsoNormal">
+                    <span style="font-size:10pt; font-family:Arial, sans-serif; color:white;">
+                      <img border="0" width="100" height="100" src="https://www.redkiwi.com/uploads/images/E-mailhandtekeningen/REDKIWI_AI_BADGE.png" alt="Redkiwi Human First" style="width:1.0416in; height:1.0416in;" />
+                    </span>
+                    <font color="#888888">
+                      <font color="#888888">
+                        <span style="font-size:10pt; font-family:Arial, sans-serif; color:white;"><u></u><u></u></span>
+                      </font>
+                    </font>
+                  </p>
+                </td>
                 <td style="padding:0cm;">
                   <p class="MsoNormal" style="line-height:15pt;">
                     <b>
